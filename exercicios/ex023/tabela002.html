@@ -11,23 +11,45 @@
         }
 
         table{
-            width: 400px;
+            width: 500px;
             border-collapse: collapse;
+            position: relative;
+        }
+
+        caption{
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightgray;
         }
 
         td, th{
             padding: 10px;
             border: 2px solid black;
-            text-align: center;
+        }   
+
+        thead > tr > th{
+            position: sticky;
+            top: -1px;
+            background-color: rgb(90, 90, 90);
+        }
+
+        thead, tfoot{
+            background-color: rgb(90, 90, 90);
+            color: white;
+        }
+
+        tbody > tr:nth-child(odd){ /* odd = n2-1* (ímpar)/
+            background-color: white; 
+        }
+
+        tbody > tr:nth-child(even){ /*even = n2 (par)*/
+            background-color: lightgray;
         }
 
         td.num{
             text-align: right;
-        }
-
-        thead, tfoot{
-            background-color: gray;
-            color: white;
+            font-weight: bold;
         }
     </style>
 </head>
@@ -44,30 +66,59 @@
                 TR, TD, TH
     -->
     <table>
+        <caption>População das Unidades Federaias</caption>
         <thead>
             <tr>
-                <th>Estado</th>
-                <th>População</th>
+                <th scope="col">Estado</th>
+                <th scope="col" style="width: 100px">População</th>
             </tr>
         </thead>
         <tbody>
             <tr>
                 <td>São Paulo</td>
-                <td class="num">44 411 238</td>
+                <td class="num">44.411.238</td>
             </tr> 
             <tr>
                 <td>Minas Gerais</td>
-                <td class="num">20 538 718</td>
+                <td class="num">20.538.718</td>
             </tr>
             <tr>
                 <td>Rio de Janeiro</td>
-                <td class="num">16 054 524</td>
+                <td class="num">16.054.524</td>
+            </tr>
+            <tr>
+                <td>Bahia</td>
+                <td class="num">14.016.906</td>
+            </tr>
+            <tr>
+                <td>Paraná</td>
+                <td class="num">11.444.380</td>
+            </tr>
+            <tr>
+                <td>Rio Grande do Sul</td>
+                <td class="num">10.882.965</td>
+            </tr>
+            <tr>
+                <td>Pernambuco</td>
+                <td class="num">9.058.931</td>
+            </tr>
+            <tr>
+                <td>Ceará</td>
+                <td class="num">8.794.957</td>
+            </tr>
+            <tr>
+                <td>Pará</td>
+                <td class="num">8.121.025</td>
+            </tr>
+            <tr>
+                <td>Santa Catarina</td>
+                <td class="num">7.610.361</td>
             </tr>
         </tbody>
         <tfoot>
             <tr>
-                <th>Total de Habitantes</th>
-                <td class="num">81 004 480</td>
+                <th scope="row">Total de Habitantes</th>
+                <td class="num">150.934.005</td>
             </tr>
         </tfoot>
     </table>
